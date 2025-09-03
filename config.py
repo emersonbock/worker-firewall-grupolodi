@@ -15,16 +15,16 @@ TELEGRAM_CHAT_ID: str = "-1002751332940" # Ou o seu ID
 # --- CONFIGURAÇÕES DAS INSTÂNCIAS OPNsense ---
 # Uma lista de dicionários, onde cada dicionário representa um firewall.
 OPNSENSE_INSTANCES: List[Dict[str, Any]] = [
-    {
-        "url": "https://guard-edi",
-        "url_alternative": "https://168.90.210.154",
-        "api_key": "aoMCgUDEJGryETBwk/nkwCmnFTBR0/tso4azMRGDKIsbiZXVNyvsSSiDAjcL6lZ0OaeOILyvD6W1+0P/",
-        "api_secret": "gHplxzqkMU+bi1At+I1pxe++kfRj0hsyJmPGS/ulOdocbhabvpaJY8foHqkKslXLvZJtbjSt+g0hpZ/x",
-        "alias_name": "filtro_dns_ativo",
-        "friendly_name": "Edifício Lodi",
-        "alias_content_active":"lista_de_filtrados lista_de_teste",
-        "alias_content":"lista_de_teste"
-    },
+    #{
+    #    "url": "https://guard-edi",
+    #    "url_alternative": "https://168.90.210.154",
+    #    "api_key": "aoMCgUDEJGryETBwk/nkwCmnFTBR0/tso4azMRGDKIsbiZXVNyvsSSiDAjcL6lZ0OaeOILyvD6W1+0P/",
+    #    "api_secret": "gHplxzqkMU+bi1At+I1pxe++kfRj0hsyJmPGS/ulOdocbhabvpaJY8foHqkKslXLvZJtbjSt+g0hpZ/x",
+    #    "alias_name": "filtro_dns_ativo",
+    #    "friendly_name": "Edifício Lodi",
+    #    "alias_content_active":"lista_de_filtrados lista_de_teste",
+    #    "alias_content":"lista_de_teste"
+    #},
     {
         "url": "https://guard-fva",
         "url_alternative": "https://168.90.210.158",
@@ -44,6 +44,8 @@ CHECK_INTERVAL_SECONDS: int = 900  # 15 minutos
 # --- CONFIGURAÇÕES DE POLÍTICA DE CONTEÚDO (ALIAS) ---
 BLOCKED_CONTENT: List[str] = ["lista_de_filtrados","lista_de_teste"]
 ALLOWED_CONTENT: List[str] = ["lista_de_teste"]
+
+HIGH_PING_THRESHOLD_MS = 50
 
 # --- CONFIGURAÇÕES DE HORÁRIO PARA POLÍTICAS ---
 LUNCH_START_TIME: time_obj = time_obj(11, 0)
